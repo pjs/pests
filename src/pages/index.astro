@@ -15,13 +15,13 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 const cookie = Astro.request.cf.city;
 
 const meta = {
-	title: cookie,
+	title: SITE.title,
 	description: SITE.description,
 };
 
 
 ---
-{cookie}
+
 <Layout {meta}>
 	<Hero />
 	<Features />

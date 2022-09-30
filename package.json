@@ -15,6 +15,9 @@
   },
   "devDependencies": {
     "@astrojs/tailwind": "^1.0.0",
+    "@astrolib/analytics": "^0.2.4",
+    "@astrolib/seo": "^0.2.1",
+    "@astrojs/partytown": "^1.0.0",
     "@fontsource/inter": "^4.5.12",
     "@tailwindcss/typography": "^0.5.7",
     "@typescript-eslint/eslint-plugin": "^5.36.2",

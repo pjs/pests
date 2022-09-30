@@ -2,6 +2,8 @@
 //import { fileURLToPath } from 'url';
 
 import { defineConfig } from 'astro/config';
+import partytown from '@astrojs/partytown';
+
 
 import tailwind from '@astrojs/tailwind';
 import cloudflare from '@astrojs/cloudflare';
@@ -23,6 +25,9 @@ export default defineConfig({
 			config: {
 				applyBaseStyles: false,
 			},
+		}),
+		partytown({
+			config: { forward: ['dataLayer.push'] },
 		}),
 	],
 
