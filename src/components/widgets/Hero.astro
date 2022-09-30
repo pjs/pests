@@ -1,6 +1,6 @@
 ---
 const cf_city = Astro.request.cf.city;
-const cf_state = Astro.request.cf.state;
+const cf_region = Astro.request.cf.region;
 ---
 
 <section>
@@ -12,7 +12,7 @@ const cf_state = Astro.request.cf.state;
 					<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">{cf_city}</span> +
 					<span
 						class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500 sm:whitespace-nowrap"
-						>{cf_state}</span
+						>{cf_region}</span
 					>
 				</h1>
 				<div class="max-w-3xl mx-auto">
