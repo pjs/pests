@@ -1,16 +1,13 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+
+//import { fileURLToPath } from 'url';
 
 import { defineConfig } from 'astro/config';
 
 import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
-import image from '@astrojs/image';
-import partytown from '@astrojs/partytown';
-
+import cloudflare from '@astrojs/cloudflare';
 import { SITE } from './src/config.mjs';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+//const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +15,8 @@ export default defineConfig({
 	site: SITE.origin,
 	base: SITE.basePathname,
 
-	output: 'static',
+	output: 'server',
+	adapter: cloudflare(),
 
 	integrations: [
 		tailwind({
@@ -26,20 +24,6 @@ export default defineConfig({
 				applyBaseStyles: false,
 			},
 		}),
-		sitemap(),
-		image(),
-
-		/* Disable this integration if you don't use Google Analytics (or other external script). */
-		partytown({
-			config: { forward: ['dataLayer.push'] },
-		}),
 	],
 
-	vite: {
-		resolve: {
-			alias: {
-				'~': path.resolve(__dirname, './src'),
-			},
-		},
-	},
 });
