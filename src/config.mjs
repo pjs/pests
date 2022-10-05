@@ -1,11 +1,11 @@
 export const SITE = {
-	name: 'AstroWind',
+	name: 'NoToPests',
 
-	origin: 'https://astrowind.vercel.app',
+	origin: 'https://notopests.com',
 	basePathname: '/',
 
-	title: 'AstroWind — Your website with Astro + Tailwind CSS',
-	description: '🚀 AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.',
+	title: 'Pest Control Near You | Call For A Free Estimate | No To Pests',
+	description: 'We make pest control simple. Call us, schedule your free inspection, and let us do the rest! Local pest removal specialists available 24/7.',
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
 	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',

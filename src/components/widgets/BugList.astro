@@ -1,9 +1,17 @@
 ---
+import specialist2 from '../../assets/images/specialist2.png';
 
 ---
 
 <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
 	<div class="grid gap-6 row-gap-10 md:grid-cols-2">
+		<div class="relative">
+			<img 
+				src={specialist2} alt="A pest control specialist for you."
+				class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+				sizes="(max-width: 768px) 100vw, 432px"
+			/>
+		</div>
 		<div class="md:pb-6 md:pr-16">
 			<h2 class="mb-8 text-3xl lg:text-4xl font-bold font-heading">
 				Sed ac magna sit amet risus tristique interdum. hac.
@@ -73,16 +81,6 @@
 					<p class="text-gray-700"></p>
 				</div>
 			</div>
-		</div>
-		<div class="relative">
-			<!--<Picture
-				class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-				src={import('~/assets/images/astronaut.jpg')}
-				widths={[400, 768]}
-				sizes="(max-width: 768px) 100vw, 432px"
-				alt="Astronaut"
-				aspectRatio="432:768"
-			/>-->
 		</div>
 	</div>
 </section>

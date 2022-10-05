@@ -3,9 +3,9 @@ import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
 import MainCall from '~/components/widgets/MainCall.astro';
-import Features from '~/components/widgets/Features.astro';
+import ThreeSteps from '~/components/widgets/ThreeSteps.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
+import BugList from '~/components/widgets/BugList.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
@@ -21,11 +21,10 @@ const meta = {
 
 <Layout {meta}>
 	<MainCall />
-	<Features />
-	<Steps />
+	<ThreeSteps />
+	<BugList />
 	<Features2 />
 	<Features3 />
 	<FAQs />
-	<Stats />
 	<CallToAction />
 </Layout>

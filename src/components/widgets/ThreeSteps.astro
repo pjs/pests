@@ -1,0 +1,54 @@
+---
+import call from '../../assets/images/call.jpg';
+import schedule from '../../assets/images/schedule.jpg';
+import exterminate from '../../assets/images/exterminate.jpg';
+
+
+const items = [
+	{
+		title: 'Call Us Today!',
+		description:
+			'Speak with our friendly representatives and connect with a pest removal specialist in your area.',
+		icon: call,
+	},
+	{
+		title: 'Schedule Your Inspection',
+		description:
+			'Describe your pest problem to our experts and lets schedule you in for a free inspection.',
+		icon: schedule,
+	},
+	{
+		title: 'Exterminator Services',
+		description:
+			'After the inspection we\'ll provide you the price and treatment needed. If agreed, we can get started that same day!',
+		icon: exterminate,
+	}
+];
+---
+
+<section class="relative">
+	<div class="absolute inset-0 bg-primary-50 dark:bg-slate-800 pointer-events-none mb-32" aria-hidden="true"></div>
+	<div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+			<div class="mb-8 text-center">
+				<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+					3-Steps To Get Rid of Pests
+				</h2>
+			</div>
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-12 dark:text-white">
+				{
+					items.map(({ title, description, icon }) => (
+						<div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition dark:border dark:border-slate-800">
+							<div class="flex items-center mb-4">
+								<img src={icon} class="w-12 h-12" />
+
+								<div class="ml-4 text-xl font-bold">{title}</div>
+							</div>
+							<p class="text-gray-500 dark:text-gray-400 text-md">{description}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>
