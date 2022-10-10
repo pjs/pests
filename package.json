@@ -38,6 +38,7 @@
     "node": "^14.15.0 || >=16.0.0"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^2.1.0"
+    "@astrojs/cloudflare": "^2.1.0",
+    "flowbite": "^1.5.3"
   }
 }

@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
+	content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}',"./node_modules/flowbite/**/*.js"],
 	theme: {
 		extend: {
 			colors: {
@@ -12,6 +12,7 @@ module.exports = {
 				'custom-blue-two': '#1E2F57',
 				'custom-tan': '#BD8339',
 				'custom-orange': '#F95E30',
+				'custom-orange-two': '#F8851E',
 				'custom-tan-background': '#F6F7EE'
 			},
 			fontFamily: {
@@ -19,7 +20,7 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('@tailwindcss/typography')],
+	plugins: [require('@tailwindcss/typography','flowbite/plugin')],
 	darkMode: 'class',
 };
 
