@@ -1,35 +1,25 @@
 ---
-
-
 const items = [
-	[
-		{
-			question: 'Can I get a free estimate?',
-			answer: `Yes you can! We will always provide you the exact price of our services on-site before any work has been done. If agreed on, work can start that same day.`,
-		},
-		{
-			question: 'How do your services work?',
-			answer: `Give us a call – speak with a qualified representative to help us understand the problem. Then schedule an inspection – earlier the better, we don’t want pests multiplying! Exterminator Services – our pest technician(s) will arrive and assess what services are needed during the inspection. We will provide you the exact cost and treatment needed on location. If you agree, we can start work that same day!`,
-		},
-		{
-			question: "What's something that you completely don't understand?",
-			answer: `A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.`,
-		},
-	],
-	[
-		{
-			question: "How much does it cost?",
-			answer: `Depending on the pest-type, size, and severity of your situation, costs can vary. After your free pest inspection, we will provide you with the entire price of treatment on location. The rest is up to you!`,
-		},
-		{
-			question: 'Will you be able to remove pests permanently?',
-			answer: `Yes we can and yes we will! Our pest control service providers are here for one thing: to get rid of pests! We also provide our customers seasonal services and preventative measures to keep your home pest-free during those nastier seasons!`,
-		},
-		{
-			question: 'What if I\'m not happy with the results?',
-			answer: `Nobody is perfect, including us. On the rare occasion where you are not happy with our pest control services, let us know. We will give you your money back (but not those pests). Simple as that, no questions asked.`,
-		},
-	],
+	{
+		question: 'Can I get a free estimate?',
+		answer: `Yes you can! We will always provide you the exact price of our services on-site before any work has been done. If agreed on, work can start that same day.`,
+	},
+	{
+		question: 'How do your services work?',
+		answer: `Give us a call – speak with a qualified representative to help us understand the problem. Then schedule an inspection – earlier the better, we don’t want pests multiplying! Exterminator Services – our pest technician(s) will arrive and assess what services are needed during the inspection. We will provide you the exact cost and treatment needed on location. If you agree, we can start work that same day!`,
+	},
+	{
+		question: 'How much does it cost?',
+		answer: `Depending on the pest-type, size, and severity of your situation, costs can vary. After your free pest inspection, we will provide you with the entire price of treatment on location. The rest is up to you!`,
+	},
+	{
+		question: 'Will you be able to remove pests permanently?',
+		answer: `Yes we can and yes we will! Our pest control service providers are here for one thing: to get rid of pests! We also provide our customers seasonal services and preventative measures to keep your home pest-free during those nastier seasons!`,
+	},
+	{
+		question: "What if I'm not happy with the results?",
+		answer: `Nobody is perfect, including us. On the rare occasion where you are not happy with our pest control services, let us know. We will give you your money back (but not those pests). Simple as that, no questions asked.`,
+	},
 ];
 ---
 
@@ -41,25 +31,176 @@ const items = [
 			</h2>
 		</div>
 	</div>
-	<div class="max-w-screen-xl sm:mx-auto">
-		<div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
-			{
-				items.map((subitems) => (
-					<div class="space-y-8">
-						{subitems.map(({ question, answer }) => (
-							<div>
-								<p class="mb-4 text-xl font-bold">
-									<!--<Icon name="tabler:arrow-down-right" class="w-7 h-7 text-primary-500 inline-block icon-bold" />-->
-									{question}
-								</p>
-								{answer.split('\n\n').map((paragraph) => (
-									<p class="text-gray-700 dark:text-gray-400 mb-2" set:html={paragraph} />
-								))}
-							</div>
-						))}
-					</div>
-				))
-			}
+
+	<div
+		id="accordion-color"
+		data-accordion="collapse"
+		data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white"
+	>
+		<h2 id="accordion-color-heading-1">
+			<button
+				type="button"
+				class="flex items-center justify-between w-full p-5 font-medium text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 hover:bg-blue-100 dark:hover:bg-gray-800 bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white"
+				data-accordion-target="#accordion-color-body-1"
+				aria-expanded="false"
+				aria-controls="accordion-color-body-1"
+			>
+				<span>{items[0].question}</span>
+				<svg
+					data-accordion-icon=""
+					class="w-6 h-6 rotate-180 shrink-0"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						fill-rule="evenodd"
+						d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+						clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</h2>
+		<div id="accordion-color-body-1" class="" aria-labelledby="accordion-color-heading-1">
+			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+				<p class="mb-2 text-gray-500 dark:text-gray-400">
+					{items[0].answer}
+				</p>
+			</div>
+		</div>
+		<h2 id="accordion-color-heading-2">
+			<button
+				type="button"
+				class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+				data-accordion-target="#accordion-color-body-2"
+				aria-expanded="false"
+				aria-controls="accordion-color-body-2"
+			>
+				<span>{items[1].question}</span>
+				<svg
+					data-accordion-icon=""
+					class="w-6 h-6 shrink-0"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						fill-rule="evenodd"
+						d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+						clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</h2>
+		<div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+				<p class="mb-2 text-gray-500 dark:text-gray-400">
+					{items[1].answer}
+				</p>
+			</div>
+		</div>
+		<h2 id="accordion-color-heading-3">
+			<button
+				type="button"
+				class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+				data-accordion-target="#accordion-color-body-3"
+				aria-expanded="false"
+				aria-controls="accordion-color-body-3"
+			>
+				<span>{items[2].question}</span>
+				<svg
+					data-accordion-icon=""
+					class="w-6 h-6 shrink-0"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						fill-rule="evenodd"
+						d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+						clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</h2>
+		<div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+				<p class="mb-2 text-gray-500 dark:text-gray-400">
+					{items[2].answer}
+				</p>
+			</div>
+		</div>
+		<h2 id="accordion-color-heading-4">
+			<button
+				type="button"
+				class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+				data-accordion-target="#accordion-color-body-4"
+				aria-expanded="false"
+				aria-controls="accordion-color-body-4"
+			>
+				<span>{items[3].question}</span>
+				<svg
+					data-accordion-icon=""
+					class="w-6 h-6 shrink-0"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						fill-rule="evenodd"
+						d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+						clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</h2>
+		<div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
+			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+				<p class="mb-2 text-gray-500 dark:text-gray-400">
+					{items[3].answer}
+				</p>
+			</div>
+		</div>
+		<h2 id="accordion-color-heading-5">
+			<button
+				type="button"
+				class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+				data-accordion-target="#accordion-color-body-5"
+				aria-expanded="false"
+				aria-controls="accordion-color-body-5"
+			>
+				<span>{items[4].question}</span>
+				<svg
+					data-accordion-icon=""
+					class="w-6 h-6 shrink-0"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						fill-rule="evenodd"
+						d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+						clip-rule="evenodd"></path>
+				</svg>
+			</button>
+		</h2>
+		<div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
+			<div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
+				<p class="mb-2 text-gray-500 dark:text-gray-400">
+					The main difference is that the core components from Flowbite are open source under the MIT license, whereas
+					Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
+					components, whereas Tailwind UI offers sections of pages.
+				</p>
+				<p class="mb-2 text-gray-500 dark:text-gray-400">
+					However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no
+					technical reason stopping you from using the best of two worlds.
+				</p>
+				<p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
+				<ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+					<li>
+						<a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a
+						>
+					</li>
+					<li>
+						<a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline"
+							>Tailwind UI</a
+						>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
+
+	<div class="max-w-screen-xl sm:mx-auto"></div>
 </div>
