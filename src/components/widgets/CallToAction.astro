@@ -2,30 +2,36 @@
 import specialist2 from '../../assets/images/specialist2.png';
 ---
 
-<section class="relative">
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="py-12 md:py-20">
-			<div class="max-w-3xl mx-auto text-center p-6 rounded-md shadow-xl dark:shadow-none">
-				<h2 class="text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
-					<!--<span>Astro</span> + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>-->
-					Connect With a Local Pest Exterminator Today!
-				</h2>
-				<img 
-					src={specialist2} alt="A pest control specialist for you."
-					class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-					sizes="(max-width: 768px) 20vw, 200px"
-				/>
-
-				<div class="mt-6">
-					<a href="#_" class="relative rounded px-5 py-2.5 inline-flex overflow-hidden group bg-custom-tan relative hover:bg-gradient-to-r hover:from-custom-orange hover:to-custom-orange text-white hover:ring-2 hover:ring-offset-2 hover:ring-custom-orange transition-all ease-out duration-300">
-						<span class="absolute right-3 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-60 ease"></span>
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-						</svg>
-						<span class="relative font-bold ml-1">(800) 888-5545</span>
-					</a>
-				</div>
-			</div>
+<section class="bg-white dark:bg-gray-900 border-b border-gray-200">
+	<div class="gap-8 items-center pt-8 px-4 mx-auto max-w-7xl xl:gap-16 md:grid md:grid-cols-2 sm:pt-16 lg:px-6">
+		<img class="hidden md:flex w-64 aspect-auto" src={specialist2} alt="pest control specialist" />
+		<div class="mt-4 md:mt-0">
+			<h2 class="mb-7 text-4xl md:text-5xl leading-tighter tracking-tighter font-heading text-custom-blue-two">
+				Connect With a <span class="text-custom-orange-two">Local Pest Exterminator</span> Today!
+			</h2>
+			<a
+				href="#_"
+				class="relative rounded px-5 py-2.5 inline-flex overflow-hidden group bg-custom-tan relative hover:bg-gradient-to-r hover:from-custom-orange hover:to-custom-orange text-white hover:ring-2 hover:ring-offset-2 hover:ring-custom-orange transition-all ease-out duration-300"
+			>
+				<span
+					class="absolute right-3 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-60 ease"
+				></span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="w-6 h-6 mr-1"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+					></path>
+				</svg>
+				<span class="relative font-bold ml-1">(800) 888-5545</span>
+			</a>
 		</div>
 	</div>
 </section>

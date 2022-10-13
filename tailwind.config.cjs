@@ -13,7 +13,8 @@ module.exports = {
 				'custom-tan': '#BD8339',
 				'custom-orange': '#F95E30',
 				'custom-orange-two': '#F8851E',
-				'custom-tan-background': '#F6F7EE'
+				'custom-tan-background': '#F6F7EE',
+				'custom-light-blue': '#DAEEF9'
 			},
 			fontFamily: {
 				sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],

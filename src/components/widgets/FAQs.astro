@@ -23,10 +23,12 @@ const items = [
 ];
 ---
 
-<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+<div class="px-4 py-16 mx-auto max-w-7xl lg:py-2">
 	<div class="max-w-xl sm:mx-auto lg:max-w-2xl">
 		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-			<h2 class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading">
+			<h2
+				class="max-w-lg mb-4 text-3xl leading-none tracking-tight sm:text-4xl md:mx-auto font-heading text-custom-blue-two"
+			>
 				Frequently Asked Questions
 			</h2>
 		</div>
@@ -34,15 +36,16 @@ const items = [
 
 	<div
 		id="accordion-color"
-		data-accordion="collapse"
-		data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white"
+		data-accordion="open"
+		data-active-classes="bg-white dark:bg-gray-800 text-black dark:text-white"
+		data-inactive-classes="bg-custom-light-blue dark:bg-gray-800 text-black dark:text-white"
 	>
 		<h2 id="accordion-color-heading-1">
 			<button
 				type="button"
-				class="flex items-center justify-between w-full p-5 font-medium text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 hover:bg-blue-100 dark:hover:bg-gray-800 bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white"
+				class="flex items-center justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 hover:bg-blue-100 dark:hover:bg-gray-800 bg-custom-light-blue dark:bg-gray-800 text-black dark:text-white"
 				data-accordion-target="#accordion-color-body-1"
-				aria-expanded="false"
+				aria-expanded="true"
 				aria-controls="accordion-color-body-1"
 			>
 				<span>{items[0].question}</span>
@@ -60,8 +63,8 @@ const items = [
 			</button>
 		</h2>
 		<div id="accordion-color-body-1" class="" aria-labelledby="accordion-color-heading-1">
-			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
+			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 bg-white">
+				<p class="mb-2 text-black dark:text-gray-400">
 					{items[0].answer}
 				</p>
 			</div>
@@ -69,7 +72,7 @@ const items = [
 		<h2 id="accordion-color-heading-2">
 			<button
 				type="button"
-				class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+				class="flex items-center bg-custom-light-blue text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
 				data-accordion-target="#accordion-color-body-2"
 				aria-expanded="false"
 				aria-controls="accordion-color-body-2"
@@ -90,7 +93,7 @@ const items = [
 		</h2>
 		<div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
 			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
+				<p class="mb-2 text-black dark:text-gray-400">
 					{items[1].answer}
 				</p>
 			</div>
@@ -98,7 +101,7 @@ const items = [
 		<h2 id="accordion-color-heading-3">
 			<button
 				type="button"
-				class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+				class="flex items-center bg-custom-light-blue text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
 				data-accordion-target="#accordion-color-body-3"
 				aria-expanded="false"
 				aria-controls="accordion-color-body-3"
@@ -119,7 +122,7 @@ const items = [
 		</h2>
 		<div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
 			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
+				<p class="mb-2 text-black dark:text-gray-400">
 					{items[2].answer}
 				</p>
 			</div>
@@ -127,7 +130,7 @@ const items = [
 		<h2 id="accordion-color-heading-4">
 			<button
 				type="button"
-				class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+				class="flex items-center bg-custom-light-blue text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
 				data-accordion-target="#accordion-color-body-4"
 				aria-expanded="false"
 				aria-controls="accordion-color-body-4"
@@ -148,7 +151,7 @@ const items = [
 		</h2>
 		<div id="accordion-color-body-4" class="hidden" aria-labelledby="accordion-color-heading-4">
 			<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
+				<p class="mb-2 text-black dark:text-gray-400">
 					{items[3].answer}
 				</p>
 			</div>
@@ -156,7 +159,7 @@ const items = [
 		<h2 id="accordion-color-heading-5">
 			<button
 				type="button"
-				class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+				class="flex items-center bg-custom-light-blue text-black justify-between w-full p-5 font-bold text-leftborder border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
 				data-accordion-target="#accordion-color-body-5"
 				aria-expanded="false"
 				aria-controls="accordion-color-body-5"
@@ -177,7 +180,7 @@ const items = [
 		</h2>
 		<div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
 			<div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
-				<p class="mb-2 text-gray-500 dark:text-gray-400">
+				<p class="mb-2 text-black dark:text-gray-400">
 					The main difference is that the core components from Flowbite are open source under the MIT license, whereas
 					Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
 					components, whereas Tailwind UI offers sections of pages.
