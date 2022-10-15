@@ -1,0 +1,114 @@
+---
+import ReviewCard from '../../components/atoms/ReviewCard.astro';
+
+import carlos from '../../assets/images/carlos.jpg';
+import james from '../../assets/images/james.jpg';
+import natalia from '../../assets/images/natalia.jpg';
+
+const items = [
+	{
+		slogan: 'Highly recommended!',
+		description:
+			"I would use them again in a heartbeat. After the inspection, me and the exterminators agreed to a treatment. They went to work 10 minutes later! Diligent, thorough, and professional. I don't think any pest has a chance. Highly recommended!",
+		picture: james,
+		name: 'James A.',
+	},
+	{
+		slogan: 'Best 15 minute call I ever had',
+		description:
+			"A quick google search about cockroaches taught me I needed to find an exterminator. No way I'm going near those things. No To Pests is fast, efficient, and straight to the point. Best 15 minute call I ever had.",
+		picture: natalia,
+		name: 'Natalia T.',
+	},
+	{
+		slogan: 'Saved our restaurant',
+		description:
+			'We have a small family restaurant so rats are a BIG problem for us. Needing a solution overnight, No To Pests came to the rescue. They practically saved our restaurant. They are the real deal!',
+		picture: carlos,
+		name: 'Carlos G. & Miranda G.',
+	},
+];
+---
+
+<section class="relative">
+	<div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+		<div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+			<div class="mb-8 text-center">
+				<h2 class="text-4xl md:text-5xl leading-tighter tracking-tighter mb-4 font-heading text-custom-blue-two">
+					<span class="text-custom-orange-two">Our Happy</span> Community of Pest-Free Customers
+				</h2>
+			</div>
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper pb-6">
+					<div class="swiper-slide">
+						<div class="mx-auto text-center space-y-6 md:w-8/12 lg:w-7/12">
+							<img
+								class="w-16 h-16 mx-auto rounded-full"
+								src={items[0].picture}
+								alt="user avatar"
+								height="220"
+								width="220"
+								loading="lazy"
+							/>
+							<p class="text-gray-600">
+								<span class="font-serif">"</span>
+								{items[0].description}
+								<span class="font-serif">"</span>
+							</p>
+							<div>
+								<h6 class="text-lg font-semibold leading-none">{items[0].name}</h6>
+								<span class="text-xs text-gray-500">{items[0].slogan}</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="mx-auto text-center space-y-6 md:w-8/12 lg:w-7/12">
+							<img
+								class="w-16 h-16 mx-auto rounded-full"
+								src={items[1].picture}
+								alt="user avatar"
+								height="220"
+								width="220"
+								loading="lazy"
+							/>
+							<p class="text-gray-600">
+								<span class="font-serif">"</span>
+								{items[1].description}
+								<span class="font-serif">"</span>
+							</p>
+							<div>
+								<h6 class="text-lg font-semibold leading-none">{items[1].name}</h6>
+								<span class="text-xs text-gray-500">{items[1].slogan}</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-slide">
+						<div class="mx-auto text-center space-y-6 md:w-8/12 lg:w-7/12">
+							<img
+								class="w-16 h-16 mx-auto rounded-full"
+								src={items[2].picture}
+								alt="user avatar"
+								height="220"
+								width="220"
+								loading="lazy"
+							/>
+							<p class="text-gray-600">
+								<span class="font-serif">"</span>
+								{items[2].description}
+								<span class="font-serif">"</span>
+							</p>
+							<div>
+								<h6 class="text-lg font-semibold leading-none">{items[2].name}</h6>
+								<span class="text-xs text-gray-500">{items[2].slogan}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>

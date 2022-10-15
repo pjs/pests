@@ -11,13 +11,12 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Reviews from '~/components/widgets/Reviews.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const meta = {
 	title: SITE.title,
 	description: SITE.description,
 };
-
-
 ---
 
 <Layout {meta}>
@@ -26,7 +25,7 @@ const meta = {
 	<!--<BugList />
 	<Features2 />
 	<Features3 />-->
-	<Reviews />
+	<Testimonials />
 	<FAQs />
 	<CallToAction />
 </Layout>
