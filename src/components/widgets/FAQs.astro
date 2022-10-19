@@ -6,7 +6,7 @@ const items = [
 	},
 	{
 		question: 'How do your services work?',
-		answer: `Give us a call – speak with a qualified representative to help us understand the problem. Then schedule an inspection – earlier the better, we don’t want pests multiplying! Exterminator Services – our pest technician(s) will arrive and assess what services are needed during the inspection. We will provide you the exact cost and treatment needed on location. If you agree, we can start work that same day!`,
+		answer: ``,
 	},
 	{
 		question: 'How much does it cost?',
@@ -25,8 +25,8 @@ const items = [
 
 <section class="bg-custom-light-blue">
 	<div class="px-4 py-16 mx-auto max-w-7xl lg:py-2">
-		<div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-			<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+		<div class="max-w-xl sm:mx-auto lg:max-w-2xl py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+			<div class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
 				<h2
 					class="max-w-lg mb-4 text-3xl leading-none tracking-tight sm:text-4xl md:mx-auto font-heading text-custom-blue-two"
 				>
@@ -37,7 +37,7 @@ const items = [
 
 		<div
 			id="accordion-color"
-			data-accordion="open"
+			data-accordion="closed"
 			data-active-classes="bg-white dark:bg-gray-800 text-black dark:text-white"
 			data-inactive-classes="bg-white dark:bg-gray-800 text-black dark:text-white"
 			class="bg-white rounded-t-xl"
@@ -45,7 +45,7 @@ const items = [
 			<h2 id="accordion-color-heading-1">
 				<button
 					type="button"
-					class="flex items-center justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-blue-200 hover:bg-blue-100 bg-white text-black"
+					class="flex items-center justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 rounded-t-xl bg-white text-black"
 					data-accordion-target="#accordion-color-body-1"
 					aria-expanded="true"
 					aria-controls="accordion-color-body-1"
@@ -74,7 +74,7 @@ const items = [
 			<h2 id="accordion-color-heading-2">
 				<button
 					type="button"
-					class="flex items-center bg-white text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+					class="flex items-center bg-white text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200"
 					data-accordion-target="#accordion-color-body-2"
 					aria-expanded="false"
 					aria-controls="accordion-color-body-2"
@@ -95,15 +95,21 @@ const items = [
 			</h2>
 			<div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
 				<div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
-					<p class="mb-2 text-black dark:text-gray-400">
-						{items[1].answer}
-					</p>
+					<ol class="pl-5 text-black list-disc dark:text-gray-400">
+						<li>Give us a call - speak with a qualified representative to help us understand the problem</li>
+						<li>Schedule an inspection - earlier the better, we don't want pests multiplying!</li>
+						<li>
+							Exterminator Services - our pest technician(s) will arrive and assess what services are needed during the
+							inspection. We will provide you the exact cost and treatment needed on location. If you agree, we can
+							start work that same day!
+						</li>
+					</ol>
 				</div>
 			</div>
 			<h2 id="accordion-color-heading-3">
 				<button
 					type="button"
-					class="flex items-center bg-white text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+					class="flex items-center bg-white text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200"
 					data-accordion-target="#accordion-color-body-3"
 					aria-expanded="false"
 					aria-controls="accordion-color-body-3"
@@ -132,7 +138,7 @@ const items = [
 			<h2 id="accordion-color-heading-4">
 				<button
 					type="button"
-					class="flex items-center bg-white text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+					class="flex items-center bg-white text-black justify-between w-full p-5 font-bold text-left border border-b-0 border-gray-200"
 					data-accordion-target="#accordion-color-body-4"
 					aria-expanded="false"
 					aria-controls="accordion-color-body-4"
@@ -161,7 +167,7 @@ const items = [
 			<h2 id="accordion-color-heading-5">
 				<button
 					type="button"
-					class="flex items-center bg-white text-black justify-between w-full p-5 font-bold text-left border border-gray-200 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:border-gray-700 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800"
+					class="flex items-center bg-white text-black justify-between w-full p-5 font-bold text-left border border-gray-200"
 					data-accordion-target="#accordion-color-body-5"
 					aria-expanded="false"
 					aria-controls="accordion-color-body-5"
@@ -183,27 +189,10 @@ const items = [
 			<div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
 				<div class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700">
 					<p class="mb-2 text-black dark:text-gray-400">
-						The main difference is that the core components from Flowbite are open source under the MIT license, whereas
-						Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone
-						components, whereas Tailwind UI offers sections of pages.
+						Nobody is perfect, including us. On the rare occasion where you are not happy with our pest control
+						services, let us know. We will give you your money back (but not those pests). Simple as that, no questions
+						asked.
 					</p>
-					<p class="mb-2 text-gray-500 dark:text-gray-400">
-						However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no
-						technical reason stopping you from using the best of two worlds.
-					</p>
-					<p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-					<ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-						<li>
-							<a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline"
-								>Flowbite Pro</a
-							>
-						</li>
-						<li>
-							<a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline"
-								>Tailwind UI</a
-							>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</div>
