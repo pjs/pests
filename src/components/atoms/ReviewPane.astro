@@ -12,9 +12,9 @@ const { slogan, description, picture, name } = Astro.props;
 			{description}
 			<span class="font-serif">"</span>
 		</p>
-		<div>
+		<div class="grid items-center justify-center">
 			<h6 class="text-lg font-semibold leading-none pb-3">{name}</h6>
-			<Stars />
+			<div class="mb-4"><Stars /></div>
 		</div>
 	</div>
 </div>
