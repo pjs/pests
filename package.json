@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^2.1.0",
-    "flowbite": "^1.5.3"
+    "flowbite": "^1.5.3",
+    "swiper": "^8.4.4"
   }
 }
