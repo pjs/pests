@@ -1,5 +1,6 @@
 ---
 import footer_logo from '../../assets/images/footer_logo.webp';
+import TermsAndPrivacy from '../atoms/TermsAndPrivacy.astro';
 ---
 
 <footer class="bg-gradient-to-r from-custom-blue-two to-custom-blue mb-20 sm:mb-0">
@@ -8,12 +9,12 @@ import footer_logo from '../../assets/images/footer_logo.webp';
 			<div>
 				<div class="text-sm text-gray-600">
 					<a
-						class="text-white hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-						href="#">Terms</a
+						class="text-white cursor-pointer hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+						data-modal-toggle="termsModal">Terms</a
 					> ·
 					<a
-						class="text-white hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-						href="#">Privacy Policy</a
+						class="text-white cursor-pointer hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+						data-modal-toggle="privacyModal">Privacy Policy</a
 					>
 				</div>
 			</div>
@@ -45,3 +46,4 @@ import footer_logo from '../../assets/images/footer_logo.webp';
 	</svg>
 	<a class="text-white font-bold hover:underline text-lg" href="">Call Now</a>
 </div>
+<TermsAndPrivacy />
