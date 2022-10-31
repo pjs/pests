@@ -1,6 +1,7 @@
 ---
 import footer_logo from '../../assets/images/footer_logo.webp';
-import TermsAndPrivacy from '../atoms/TermsAndPrivacy.astro';
+import TermsModal from '../atoms/TermsModal.vue';
+import PrivacyModal from '../atoms/PrivacyModal.vue';
 ---
 
 <footer class="bg-gradient-to-r from-custom-blue-two to-custom-blue mb-20 sm:mb-0">
@@ -8,14 +9,8 @@ import TermsAndPrivacy from '../atoms/TermsAndPrivacy.astro';
 		<div class="grid grid-cols-2 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12 items-center">
 			<div>
 				<div class="text-sm text-gray-600">
-					<a
-						class="text-white cursor-pointer hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-						data-modal-toggle="termsModal">Terms</a
-					> ·
-					<a
-						class="text-white cursor-pointer hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
-						data-modal-toggle="privacyModal">Privacy Policy</a
-					>
+					<TermsModal client:load /> ·
+					<PrivacyModal client:load />
 				</div>
 			</div>
 			<div class="flex justify-end">
@@ -46,4 +41,3 @@ import TermsAndPrivacy from '../atoms/TermsAndPrivacy.astro';
 	</svg>
 	<a class="text-white font-bold hover:underline text-lg" href="">Call Now</a>
 </div>
-<TermsAndPrivacy />
