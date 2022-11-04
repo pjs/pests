@@ -8,9 +8,7 @@ const { slogan, description, picture, name } = Astro.props;
 		<img class="w-20 h-20 mx-auto" src={picture} alt="user avatar" height="220" width="220" loading="lazy" />
 		<p class="text-black font-bold dark:text-gray-400 text-md m-4">"{slogan}"</p>
 		<p class="text-gray-600">
-			<span class="font-serif">"</span>
-			{description}
-			<span class="font-serif">"</span>
+			"{description}"
 		</p>
 		<div class="grid items-center justify-center">
 			<h6 class="text-lg font-semibold leading-none pb-3">{name}</h6>
